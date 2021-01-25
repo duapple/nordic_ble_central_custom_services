@@ -1,0 +1,9 @@
+#KEIL
+pca10056/s140/arm5_no_packs/_build/*
+
+pca10056/s140/arm5_no_packs/*.uvguix.*
+
+pca10056/s140/arm5_no_packs/*.scvd
+pca10056/s140/arm5_no_packs/*.txt
+
+pca10056/s140/arm5_no_packs/*.ini
