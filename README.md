@@ -1,7 +1,3 @@
----
-typora-copy-images-to: upload
----
-
 # Nordic 中心设备添加自定义服务处理
 
 
@@ -65,11 +61,11 @@ static void myservice_c_init(void)
 
 在 `sdk_config.h` 中为我们自定义的 `uuid` 分配内存空间。
 
- <img src="C:\Users\28328\Desktop\uuid_count.png" alt="uuid_count" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/duapple/Code/master/pic/20210127105458.png" alt="uuid_count" style="zoom:50%;" />
 
 运行时，根据提示`RTT View`打印修改 `RAM` 大小。
 
-<img src="C:\Users\28328\Desktop\RAM.png" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/duapple/Code/master/pic/20210127105537.png" alt="RAM" style="zoom:50%;" />
 
 
 
@@ -231,9 +227,9 @@ static void db_disc_handler(ble_db_discovery_evt_t * p_evt)
 
 外围设备服务如下，都是 `nus` 服务基础上进行修改的。相当于我们自己新建了另外一个 `nus` 服务。
 
-<img src="C:\Users\28328\Desktop\Screenshot_2021-01-26-00-03-53-103_no.nordicsemi..png" style="zoom:50%;" />
 
 
+<img src="https://raw.githubusercontent.com/duapple/Code/master/pic/20210127105703.png" alt="Screenshot_2021-01-26-00-03-53-103_no.nordicsemi." style="zoom: 33%;" />
 
 这里我的自定义服务是在 `Nordic 52810` 上跑的。然后将 `Nordic 52840` 作为中心设备来连接这个外围设备。`UART Service` 用工程中原有的。然后`Unknown Service` 采用我们自己的服务处理来进行连接和处理。
 
@@ -243,5 +239,4 @@ static void db_disc_handler(ble_db_discovery_evt_t * p_evt)
 
 这里，外围设备上对应服务的回数据处理回调（`nus_new_data_handler` 和 `nus_data_handler`）接收到了来自中心设备的两个服务处理的数据。
 
-![](C:\Users\28328\Desktop\rtt.png)
-
+![rtt](https://raw.githubusercontent.com/duapple/Code/master/pic/20210127105733.png)
